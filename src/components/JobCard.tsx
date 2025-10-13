@@ -66,10 +66,17 @@ const JobCard = ({ title, company, location, type, salary, postedTime, tags }: J
       </div>
 
       <div className="mt-4 pt-4 border-t border-border/50 flex gap-2">
-        <Button className="flex-1 bg-gradient-primary hover:shadow-elegant transition-all">
+        <Button 
+          className="flex-1 bg-gradient-primary hover:shadow-elegant transition-all"
+          onClick={() => window.location.href = "/job/1"}
+        >
           قدم الآن
         </Button>
-        <Button variant="outline" className="flex-1">
+        <Button 
+          variant="outline" 
+          className="flex-1"
+          onClick={() => window.location.href = "/job/1"}
+        >
           التفاصيل
         </Button>
       </div>

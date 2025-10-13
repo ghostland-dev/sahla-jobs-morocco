@@ -15,17 +15,20 @@ const Header = () => {
         </div>
 
         <nav className="hidden md:flex items-center gap-6">
-          <a href="#" className="text-sm font-medium hover:text-primary transition-colors">
+          <a href="/" className="text-sm font-medium hover:text-primary transition-colors">
             الرئيسية
           </a>
-          <a href="#" className="text-sm font-medium hover:text-primary transition-colors">
+          <a href="/" className="text-sm font-medium hover:text-primary transition-colors">
             الوظائف
           </a>
-          <a href="#" className="text-sm font-medium hover:text-primary transition-colors">
-            الشركات
+          <a href="/companies" className="text-sm font-medium hover:text-primary transition-colors">
+            للشركات
           </a>
-          <a href="#" className="text-sm font-medium hover:text-primary transition-colors">
+          <a href="/about" className="text-sm font-medium hover:text-primary transition-colors">
             من نحن
+          </a>
+          <a href="/contact" className="text-sm font-medium hover:text-primary transition-colors">
+            اتصل بنا
           </a>
         </nav>
 
@@ -33,11 +36,18 @@ const Header = () => {
           <Button variant="ghost" size="icon">
             <Search className="w-5 h-5" />
           </Button>
-          <Button variant="outline" className="gap-2">
+          <Button 
+            variant="outline" 
+            className="gap-2"
+            onClick={() => window.location.href = "/auth"}
+          >
             <User className="w-4 h-4" />
             <span className="hidden sm:inline">تسجيل الدخول</span>
           </Button>
-          <Button className="bg-gradient-primary hover:shadow-elegant transition-all duration-300">
+          <Button 
+            className="bg-gradient-primary hover:shadow-elegant transition-all duration-300"
+            onClick={() => window.location.href = "/companies"}
+          >
             انشر وظيفة
           </Button>
         </div>
